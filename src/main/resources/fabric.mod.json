@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "tempus",
+	"version": "${version}",
+	"name": "Tempus",
+	"description": "Tempus is a simple mod that automates world backups with configurations to ensure data safety.",
+	"authors": [
+		"sea"
+	],
+	"contact": {
+		"sources": "https://github.com/UnknownSea/Tempus"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tempus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"server": [
+			"net.seasonal.tempus.Tempus"
+		],
+		"fabric-datagen": [
+			"net.seasonal.tempus.TempusDataGenerator"
+		]
+	},
+	"mixins": [
+		"tempus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
